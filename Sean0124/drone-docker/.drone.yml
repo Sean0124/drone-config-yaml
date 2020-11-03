@@ -1,0 +1,20 @@
+kind: pipeline
+type: kubernetes
+name: 2222222222 
+
+steps:
+  - name: 1111111step111111
+    image: busybox
+    commands:
+      - echo "step1"
+      - echo ${DRONE_TAG}
+      - echo ${DRONE_BUILD_STATUS}
+      - cat /run/drone/env
+
+  - name: 22222step2222222
+    image: busybox
+    commands:
+      - echo "step2"
+      - echo ${DRONE_TAG}
+      - echo ${DRONE_BUILD_STATUS}
+      - cat /run/drone/env
